@@ -1,0 +1,30 @@
+[project]
+name = "StartupBuddy"
+version = "0.1.1"
+description = "StartupBuddy is a tool to help you launch your next big idea!"
+readme = "README.md"
+requires-python = ">=3.13.2"
+dependencies = [
+    "coffy>=0.2.5",
+    "platformdirs>=4.10.0",
+    "startupbuddykernel>=0.1.3",
+    "textual>=8.2.7",
+    "textual-dev>=1.8.0",
+]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+# Only include specific packages and their subpackages
+include = ["startupbuddy", "interfaces", "screens", "screens.components"]
+
+# Exclude unwanted directories or build metadata
+exclude = ["dist*"]
+
+# Optional: Set the root scanning directory (defaults to ".")
+where = ["."]
+
+[tool.setuptools.package-data]
+startupbuddy = ["styles.tcss"]

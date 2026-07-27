@@ -12,6 +12,7 @@ from textual.widgets import Footer, Header, Input, Static, Button
 from .components.message import Message
 from textual import work, on, log
 from interfaces.fs import ProjectDirClass
+from textual import log
 
 class NewPitchScreen(Screen):
     """A simple chat interface screen."""

@@ -55,8 +55,10 @@ class StartScreen(Screen):
         missing = not settings or "api_key" not in settings
         self.query_one("#api-key-banner", Static).display = missing
         log(f"The missing fvalue is {missing}")
+        log(f"the settings is {settings}")
         if missing is False:
             os.environ['WAVESPEED_API_KEY'] = settings['api_key']
+            log(f"the environment variable {os.environ['WAVESPEED_API_KEY']}")
 
     @on(RadioSet.Changed)
     def option_selected(self, event: RadioSet.Changed) -> None:

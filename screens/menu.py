@@ -67,7 +67,7 @@ class MenuScreen(Screen):
         self._refresh_project()
 
     def on_screen_resume(self) -> None:
-        # MenuScreen is a cached singleton in KernelCli.SCREENS, so re-read the
+        # MenuScreen is a cached singleton in StartupBuddy.SCREENS, so re-read the
         # current project each time the screen is shown (it may have changed).
         self._refresh_project()
 

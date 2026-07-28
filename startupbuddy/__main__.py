@@ -6,7 +6,7 @@ from platformdirs import PlatformDirs
 from textual import log
 
 
-class KernelCli(App):
+class StartupBuddy(App):
     CSS_PATH = 'styles.tcss'
     SCREENS = {
       'main': screens.MainScreen, 
@@ -73,5 +73,5 @@ class KernelCli(App):
     
 
 if __name__ == "__main__":
-    app = KernelCli()
+    app = StartupBuddy()
     app.run()
